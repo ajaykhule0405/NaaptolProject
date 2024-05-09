@@ -13,7 +13,7 @@ import org.openqa.selenium.support.PageFactory;
 public class ResultPage {
 	
 	@FindBy (xpath = "//div[@class='grid_Square ']")private List<WebElement> product;
-	@FindBy (xpath = "//a[@class='bt_compare icon chat quickFancyBox']")private List<WebElement> quickview;
+	@FindBy (xpath = "//a[@class='bt_compare icon chat quickFancyBox']//span")private List<WebElement> quickview;
 	@FindBy (xpath = "//div[@class='item_title']")private List<WebElement> productTitle;
 	@FindBy (xpath = "//a[@id='cart-panel-button-0']")private WebElement clickHereToBuyButton;
 	@FindBy (xpath = "//div[@class='item_title']//a")private List<WebElement> productName;

@@ -35,13 +35,14 @@ public class NaaptolAddToCartTest extends BaseTest {
 	}
 	
 	@Test
-	public void addSingleProductToCartUsingQuickview()
+	public void addSingleProductToCartUsingQuickview() throws InterruptedException
 	{
 		test =reports.createTest("addSingleProductTocart");
 		NaaptolHomePage naaptolHomePage = new NaaptolHomePage(driver);
 		naaptolHomePage.enterProductNameSearchTab("Mobiles");
 		naaptolHomePage.clickOnSeachIcon();
 		
+		Thread.sleep(2000);
 		ResultPage resultPage = new ResultPage(driver);
 		resultPage.addProductUsingQuickViewButtion(driver, 0);
 		
@@ -82,6 +83,7 @@ public class NaaptolAddToCartTest extends BaseTest {
 		naaptolHomePage.enterProductNameSearchTab("Mobiles");
 		naaptolHomePage.clickOnSeachIcon();
 		
+		Thread.sleep(2000);
 		ResultPage resultPage = new ResultPage(driver);
 		resultPage.addProductUsingQuickViewButtion(driver, 0);
 		NaaptolProductDescription naaptolProductDescription = new NaaptolProductDescription(driver);
@@ -96,6 +98,7 @@ public class NaaptolAddToCartTest extends BaseTest {
 		
 		Thread.sleep(1000);
 		int count = naaptolCartPage.getProductInCart();
+		System.out.println(count);
 		Assert.assertEquals(count , 2);
 
 	}

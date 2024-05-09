@@ -13,14 +13,14 @@ public class NaaptolCartPage {
 	@FindBy (xpath = "//a[@class='link_Continue']")private WebElement continueShopping;
 	@FindBy (xpath = "//a[text()='Proceed to Checkout']")private List<WebElement> proceedToChechout;
 	@FindBy (xpath = "//div[@id='cartItems']//h2")private List<WebElement> productTitle;
-	@FindBy (xpath = "//div[@id='cartItems']")private List<WebElement> productCount;
+	@FindBy (xpath = "//div[@id='cartItems']//ul")private List<WebElement> productCount;
 	@FindBy (xpath = "(//ul[@id='cartTotal']//li)[1]")private WebElement cartAmount;
 	@FindBy (xpath = "//li[@class='totalCart']")private WebElement cartTotalAmount;
 	@FindBy (xpath = "(//ul[@id='cartTotal']//li)[2]")private WebElement voucherAmount;
 	@FindBy (xpath = "//input[@id='cvName']")private WebElement voucherCodeSearchBox;
 	@FindBy (xpath = "//a[@id='cvApplybtn']")private WebElement applyButton;
 	@FindBy (xpath = "//a[text()='Remove']")private List<WebElement> removeButton;
-	
+	@FindBy (xpath = "//span[contains(text(),'You have No Items in Cart !!! ')]")private WebElement cartText;
 	
 	
 	public NaaptolCartPage(WebDriver driver)
@@ -85,5 +85,10 @@ public class NaaptolCartPage {
 	public void clickOnRemoveButton(int index)
 	{
 		removeButton.get(index).click();
+	}
+	
+	public String getEmptyCartText()
+	{
+		return cartText.getText();
 	}
 }

@@ -32,13 +32,14 @@ public class NaaptolRemoveProductFromCartTest extends BaseTest {
 	}
 	
 	@Test
-	public void removeProductFromCart()
+	public void removeProductFromCart() throws InterruptedException
 	{
 		test = reports.createTest("Remove_Product_From_Crat");
 		NaaptolHomePage naaptolHomePage = new NaaptolHomePage(driver);
 		naaptolHomePage.enterProductNameSearchTab("Mobiles");
 		naaptolHomePage.clickOnSeachIcon();
 		
+		Thread.sleep(2000);
 		ResultPage resultPage = new ResultPage(driver);
 		resultPage.addProductUsingQuickViewButtion(driver, 0);
 		
@@ -47,7 +48,9 @@ public class NaaptolRemoveProductFromCartTest extends BaseTest {
 		
 		NaaptolCartPage naaptolCartPage = new NaaptolCartPage(driver);
 		naaptolCartPage.clickOnRemoveButton(0);
-		int productInCart = naaptolCartPage.getProductInCart()-1;
+		
+		Thread.sleep(2000);
+		int productInCart = naaptolCartPage.getProductInCart();
 		Assert.assertEquals(productInCart, 0);
 	}
 	

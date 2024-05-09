@@ -60,13 +60,6 @@ public class NaaptolPaymentPage {
 	{
 		clickHereToPlaceOrder.click();
 	}
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 }

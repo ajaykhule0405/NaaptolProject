@@ -83,10 +83,7 @@ public class NaaptolShippingAddressTest extends BaseTest{
 			test.log(Status.SKIP, result.getName());
 		}
 	}
-	{
-		
-	}
-	
+
 	
 	@AfterTest
 	public void publishReport()

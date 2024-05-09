@@ -5,11 +5,13 @@
     <classes>
       <class name="test.NaaptolAddToCartTest">
         <methods>
-          <include name="addMultipleProductsToCart"/>
           <include name="testResult"/>
           <include name="configureReports"/>
+          <include name="addMultipleProductsToCartUsingQuickview"/>
           <include name="openBrowser"/>
           <include name="publishReport"/>
+          <include name="addSingleProductToCartUsingQuickview"/>
+          <include name="addSingleProduct"/>
         </methods>
       </class> <!-- test.NaaptolAddToCartTest -->
     </classes>

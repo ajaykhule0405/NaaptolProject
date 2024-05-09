@@ -9,7 +9,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
 public class BaseTest {
-	WebDriver driver;
+	public static WebDriver driver;
 	ExtentReports reports;
 	ExtentTest test;
 	
